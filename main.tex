@@ -67,19 +67,20 @@ headsepline, % Uncomment to get a line under the header
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Seguridad y bajo consumo para redes oportunistas en catastrofes} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
-\supervisor{Dr. Hector \textsc{Zatarain}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\thesistitle{Uso de redes neuronales convolucionales para el estudio de parametros post-cosecha del datil medjool en el valle de Mexicali} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\director{Dr. Héctor \textsc{Zatarain-Aceves}} % Your supervisor's name, this is used in the title page, print it elsewhere with \dirname
+\codirector{Dr. Juan Pablo \textsc{García-Vázquez}} % Your co-supervisor's name, this is used in the title page, print it elsewhere with \codirname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
-\degree{Doctorado en Ciencias} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
-\author{Carlos \textsc{Gallegos}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+\degree{Doctor en Ciencias} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+\author{José Carlos \textsc{Gallegos-Mariscal}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
 \addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
 
 \subject{Ciencias de la Ingeniería} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
 \keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
 \university{\href{http://www.uabc.mx}{Universidad Autónoma de Baja California}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
-\department{\href{http://department.university.com}{Maestría y Doctorado en Ciencias e Ingeniería}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
-\group{\href{http://researchgroup.university.com}{Subcomité Academico de Computación}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
-\faculty{\href{http://faculty.university.com}{Facultad de Ingeniería, Arquitectura y Diseño}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+\department{\href{https://www.mydciuabc.com/}{Maestría y Doctorado en Ciencias e Ingeniería}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\group{\href{http://fiad.uabc.mx/posgrado/cuerpos.php}{Subcomité Academico de Computación}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
+\faculty{\href{http://fiad.ens.uabc.mx/}{Facultad de Ingeniería, Arquitectura y Diseño}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
 
 \AtBeginDocument{
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
@@ -100,39 +101,54 @@ headsepline, % Uncomment to get a line under the header
 \begin{titlepage}
 \begin{center}
 
-\vspace*{.06\textheight}
-{\scshape\LARGE \univname\par}\vspace{1.5cm} % University name
-\textsc{\Large Tesis Doctoral}\\[0.5cm] % Thesis type
+%\vspace*{.06\textheight} % Space to fill the page vertically
+{\scshape\LARGE \univname\par}\vspace{1cm} % University name
+\textsc{Protocolo de Invetigación}\\[0.5cm] % Thesis type
 
-\HRule \\[0.4cm] % Horizontal line
+\HRule \\%[0.4cm] % Horizontal line
 {\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
-\HRule \\[1.5cm] % Horizontal line
+\HRule \\[0.5cm] % Horizontal line
 
-\begin{minipage}[t]{0.4\textwidth}
-\begin{flushleft} \large
-\emph{Autor:}\\
+\begin{minipage}[t]{0.6\textwidth}
+%\begin{flushleft}
+\large \center
+\emph{Autor}\\
 \href{https://www.linkedin.com/in/jscarlos/}{\authorname} % Author name - remove the \href bracket to remove the link
-\end{flushleft}
+\vspace{0.5cm}
+%\end{flushleft}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
-\begin{flushright} \large
-\emph{Director:} \\
-\href{http://www.google.com}{\supname} % Supervisor name - remove the \href bracket to remove the link
+\begin{minipage}[t]{0.6\textwidth}
+%\begin{flushright}
+\large \center
+\emph{Director} \\
+\href{https://scholar.google.com.mx/citations?user=egt6SVMAAAAJ&hl=en}{\dirname} % Supervisor name - remove the \href bracket to remove the link
+\vspace{0.2cm}
+%\end{flushright}
+\end{minipage}
+\begin{minipage}[t]{0.6\textwidth}
+%\begin{flushright}
+\large \center
+\emph{Co-Director} \\
+\href{https://google.com}{\codirname} % Co-Supervisor name - remove the \href bracket to remove the link
+\vspace{0.2cm}
+%\end{flushright}
+\end{minipage}\\[1.5cm]
+
+%\vfill
+
+\large \textit{Protocolo de investigación para ingresar al grado de\\\degreename}\\[0.5cm] % University requirement text
+\textit{en el programa de}\\\deptname\\[0.5cm]
+\textit{perteneciente a la}\\\facname\\[0.5cm] % Research group name and department name
+
+\vfill
+
+%{\large}\\[2cm]%\today}\\[2cm] % Date
+\begin{flushright}
+{\small Ensenada, Baja California a 29 de abril del 2024.}\\[2cm] % Date
 \end{flushright}
-\end{minipage}\\[3cm]
-
-\vfill
-
-\large \textit{Tesis que para obtener\\ el grado de \degreename}\\[0.3cm] % University requirement text
-\textit{en el}\\[0.4cm]
-\facname\\\deptname\\[2cm] % Research group name and department name
-
-\vfill
-
-{\large \today}\\[4cm] % Date
 %\includegraphics{Logo} % University/department logo - uncomment to place it
 
-\vfill
+%\vfill
 \end{center}
 \end{titlepage}
 
@@ -140,55 +156,55 @@ headsepline, % Uncomment to get a line under the header
 %	DECLARATION PAGE
 %----------------------------------------------------------------------------------------
 
-\begin{declaration}
-\addchaptertocentry{\authorshipname} % Add the declaration to the table of contents
-\noindent Yo, \authorname, bajo protesta de decir la verad declaro que esta tesis titulada, \enquote{\ttitle} y el trabajo presentado son de mi autoría. Yo confirmo que:
+% \begin{declaration}
+% \addchaptertocentry{\authorshipname} % Add the declaration to the table of contents
+% \noindent Yo, \authorname, bajo protesta de decir la verad declaro que esta tesis titulada, \enquote{\ttitle} y el trabajo presentado son de mi autoría. Yo confirmo que:
 
-\begin{itemize}
-\item Este trabajo fue hecho en su totalidad o principalmente mientras fue candidato a un grado de investigación en esta universidad.
-\item Cuando alguna parte de esta tesis haya sido presentada previamente para obtener un título o cualquier otra cualificación en esta Universidad o cualquier otra institución, esto se ha indicado claramente.
-\item Cuando he consultado el trabajo publicado de otros, siempre aparece claramente citado.
-\item Cuando he citado el trabajo de otros, siempre se cita la fuente. Salvo estas citas, esta tesis es completamente de mi autoría.
-\item He reconocido todas las principales fuentes de ayuda.
-\item Cuando la tesis se basa en un trabajo realizado por mí en conjunto con otros, he dejado claro exactamente qué hicieron los demás y qué he aportado yo mismo.\\
-\end{itemize}
+% \begin{itemize}
+% \item Este trabajo fue hecho en su totalidad o principalmente mientras fue candidato a un grado de investigación en esta universidad.
+% \item Cuando alguna parte de esta tesis haya sido presentada previamente para obtener un título o cualquier otra cualificación en esta Universidad o cualquier otra institución, esto se ha indicado claramente.
+% \item Cuando he consultado el trabajo publicado de otros, siempre aparece claramente citado.
+% \item Cuando he citado el trabajo de otros, siempre se cita la fuente. Salvo estas citas, esta tesis es completamente de mi autoría.
+% \item He reconocido todas las principales fuentes de ayuda.
+% \item Cuando la tesis se basa en un trabajo realizado por mí en conjunto con otros, he dejado claro exactamente qué hicieron los demás y qué he aportado yo mismo.\\
+% \end{itemize}
 
-\noindent Firmado:\\
-\rule[0.5em]{25em}{0.5pt} % This prints a line for the signature
+% \noindent Firmado:\\
+% \rule[0.5em]{25em}{0.5pt} % This prints a line for the signature
 
-\noindent Fecha:\\
-\rule[0.5em]{25em}{0.5pt} % This prints a line to write the date
-\end{declaration}
+% \noindent Fecha:\\
+% \rule[0.5em]{25em}{0.5pt} % This prints a line to write the date
+% \end{declaration}
 
-\cleardoublepage
+% \cleardoublepage
 
 %----------------------------------------------------------------------------------------
 %	QUOTATION PAGE
 %----------------------------------------------------------------------------------------
 
-\vspace*{0.2\textheight}
+% \vspace*{0.2\textheight}
 
-\noindent\enquote{\itshape Gracias a mi sólida formación académica, hoy puedo escribir cientos de palabras sobre prácticamente cualquier tema sin poseer ni una pizca de información, gracias a lo cual conseguí un buen trabajo en el periodismo.}\bigbreak
+% \noindent\enquote{\itshape Gracias a mi sólida formación académica, hoy puedo escribir cientos de palabras sobre prácticamente cualquier tema sin poseer ni una pizca de información, gracias a lo cual conseguí un buen trabajo en el periodismo.}\bigbreak
 
-\hfill Dave Barry
+% \hfill Dave Barry
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
 %----------------------------------------------------------------------------------------
 
-\begin{abstract}
-\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-El resumen de la tesis se escribe aquí (y generalmente se limita a esta página). La página se mantiene centrada verticalmente, por lo que también puede expandirse al espacio en blanco sobre el título.\ldots
-\end{abstract}
+% \begin{abstract}
+% \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+% Este protocolo de tesis se enfoca en definir el uso de redes neuronales convolucionales para el estudio de parámetros post-cosecha del dátil Medjool en el Valle de Mexicali. El objetivo principal es desarrollar un sistema de detección y clasificación de enfermedades o plagas en el cultivo del dátil, utilizando técnicas avanzadas de visión por computadora y aprendizaje profundo.
+% \end{abstract}
 
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
 %----------------------------------------------------------------------------------------
 
-\begin{acknowledgements}
-\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
-Los agradecimientos y las personas a agradecer van aquí, no olvides incluir a tu asesor de proyecto.\ldots
-\end{acknowledgements}
+% \begin{acknowledgements}
+% \addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+% Los agradecimientos y las personas a agradecer van aquí, no olvides incluir a tu asesor de proyecto.\ldots
+% \end{acknowledgements}
 
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -196,55 +212,55 @@ Los agradecimientos y las personas a agradecer van aquí, no olvides incluir a t
 
 \tableofcontents % Prints the main table of contents
 
-\listoffigures % Prints the list of figures
+% \listoffigures % Prints the list of figures
 
-\listoftables % Prints the list of tables
+% \listoftables % Prints the list of tables
 
 %----------------------------------------------------------------------------------------
 %	ABBREVIATIONS
 %----------------------------------------------------------------------------------------
 
-\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+% \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 
-\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
-\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+% \textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
+% \textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
 
-\end{abbreviations}
+% \end{abbreviations}
 
 %----------------------------------------------------------------------------------------
 %	PHYSICAL CONSTANTS/OTHER DEFINITIONS
 %----------------------------------------------------------------------------------------
 
-\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
+% \begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
 
-% The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
+% % The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
 
-Velocidad de la luz & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
-%Constant Name & $Symbol$ & $Constant Value$ with units\\
+% Velocidad de la luz & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
+% %Constant Name & $Symbol$ & $Constant Value$ with units\\
 
-\end{constants}
+% \end{constants}
 
 %----------------------------------------------------------------------------------------
 %	SYMBOLS
 %----------------------------------------------------------------------------------------
 
-\begin{symbols}{lll} % Include a list of Symbols (a three column table)
+% \begin{symbols}{lll} % Include a list of Symbols (a three column table)
 
-$a$ & distance & \si{\meter} \\
-$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
-%Symbol & Name & Unit \\
+% $a$ & distance & \si{\meter} \\
+% $P$ & power & \si{\watt} (\si{\joule\per\second}) \\
+% %Symbol & Name & Unit \\
 
-\addlinespace % Gap to separate the Roman symbols from the Greek
+% \addlinespace % Gap to separate the Roman symbols from the Greek
 
-$\omega$ & angular frequency & \si{\radian} \\
+% $\omega$ & angular frequency & \si{\radian} \\
 
-\end{symbols}
+% \end{symbols}
 
 %----------------------------------------------------------------------------------------
 %	DEDICATION
 %----------------------------------------------------------------------------------------
 
-\dedicatory{For/Dedicated to/To my\ldots}
+% \dedicatory{For/Dedicated to/To my\ldots}
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
@@ -258,10 +274,28 @@ $\omega$ & angular frequency & \si{\radian} \\
 % Uncomment the lines as you write the chapters
 
 \include{Chapters/Chapter1}
-%\include{Chapters/Chapter2}
-%\include{Chapters/Chapter3}
-%\include{Chapters/Chapter4}
+\include{Chapters/Chapter2}
+\include{Chapters/Chapter3}
+\include{Chapters/Chapter4}
 %\include{Chapters/Chapter5}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\printbibliography[heading=bibintoc]
+
+%----------------------------------------------------------------------------------------
+%	TIMELINE PAGE
+%----------------------------------------------------------------------------------------
+
+%\timeline % Uncomment to use the timeline page
+
+%----------------------------------------------------------------------------------------
+%	BUDGET PAGE
+%----------------------------------------------------------------------------------------
+
+%\budget % Uncomment to use the budget page
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
@@ -272,15 +306,9 @@ $\omega$ & angular frequency & \si{\radian} \\
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-\include{Appendices/AppendixA}
+%\include{Appendices/AppendixA}
 %\include{Appendices/AppendixB}
 %\include{Appendices/AppendixC}
-
-%----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
-
-\printbibliography[heading=bibintoc]
 
 %----------------------------------------------------------------------------------------
 

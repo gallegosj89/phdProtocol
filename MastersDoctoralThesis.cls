@@ -213,7 +213,8 @@
  \def\ttitle{#2}%
 }
 \DeclareDocumentCommand{\author}{m}{\newcommand{\authorname}{#1}\renewcommand{\@author}{#1}}
-\NewDocumentCommand{\supervisor}{m}{\newcommand{\supname}{#1}}
+\NewDocumentCommand{\director}{m}{\newcommand{\dirname}{#1}}
+\NewDocumentCommand{\codirector}{m}{\newcommand{\codirname}{#1}}
 \NewDocumentCommand{\examiner}{m}{\newcommand{\examname}{#1}}
 \NewDocumentCommand{\degree}{m}{\newcommand{\degreename}{#1}}
 \NewDocumentCommand{\addresses}{m}{\newcommand{\addressname}{#1}}
@@ -247,6 +248,7 @@
 \usepackage{xcolor} % Required for specifying custom colours
 
 \colorlet{mdtRed}{red!50!black}
+\colorlet{mdtOchre}{blue!80!yellow!20!}
 
 %----------------------------------------------------------------------------------------
 %	MARGINS
@@ -360,20 +362,35 @@ KOMA-script documentation for details.}]{fancyhdr}
 		\tttypeout{\abstractname}
 		#1%added to be able to have abstract more than one page long
 		\thispagestyle{plain}
+		% \begin{center}
+		% 	{\normalsize \MakeUppercase{\univname} \par}% University name in capitals
+		% 	\bigskip
+		% 	{\huge\textit{\abstractname} \par}
+		% 	\bigskip
+		% 	{\normalsize \facname \par}% Faculty name
+		% 	{\normalsize \deptname \par}% Department name
+		% 	\bigskip
+		% 	{\normalsize \degreename\par}% Degree name
+		% 	\bigskip
+		% 	{\normalsize\bfseries \@title \par}% Thesis title
+		% 	\medskip
+		% 	{\normalsize \byname{} \authorname \par}% Author name
+		% 	\bigskip
+		% \end{center}
 		\begin{center}
-			{\normalsize \MakeUppercase{\univname} \par}% University name in capitals
-			\bigskip
+			%{\normalsize \MakeUppercase{\univname} \par}% University name in capitals
+			%\bigskip
 			{\huge\textit{\abstractname} \par}
 			\bigskip
-			{\normalsize \facname \par}% Faculty name
-			{\normalsize \deptname \par}% Department name
-			\bigskip
-			{\normalsize \degreename\par}% Degree name
-			\bigskip
-			{\normalsize\bfseries \@title \par}% Thesis title
-			\medskip
-			{\normalsize \byname{} \authorname \par}% Author name
-			\bigskip
+			%{\normalsize \facname \par}% Faculty name
+			%{\normalsize \deptname \par}% Department name
+			%\bigskip
+			%{\normalsize \degreename\par}% Degree name
+			%\bigskip
+			%{\normalsize\bfseries \@title \par}% Thesis title
+			%\medskip
+			%{\normalsize \byname{} \authorname \par}% Author name
+			%\bigskip
 		\end{center}
 	}
 	{
@@ -412,6 +429,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \usepackage{xcolor}
 \colorlet{mdtRed}{red!50!black}
+\colorlet{mdtOchre}{green!65!black}
 \newcommand{\acknowledgementname}{Acknowledgements}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementname}{Acknowledgements} % Acknowledgement text for English countries
 \providecaptionname{german,ngerman,austrian,naustrian}{\acknowledgementname}{Danksagung} % Acknowledgement text for Germanic countries
@@ -529,8 +547,8 @@ bookmarksopen=true,
 bookmarksopenlevel=0,
 hypertexnames=false,
 colorlinks=true,% Set to false to disable coloring links
-citecolor=magenta,% The color of citations
-linkcolor=red,% The color of references to document elements (sections, figures, etc)
+citecolor=red,% The color of citations
+linkcolor=black,% The color of references to document elements (sections, figures, etc)
 urlcolor=mdtRed,% The color of hyperlinks (URLs)
 pdfstartview={FitV},
 unicode,
