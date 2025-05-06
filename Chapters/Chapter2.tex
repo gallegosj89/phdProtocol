@@ -1,32 +1,86 @@
 % Chapter 2
 
-\chapter{Objetivos} % Main chapter title
+\chapter{Objetivos de la investigación}
 
-\label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
-
-%----------------------------------------------------------------------------------------
-
-\section{Objetivo General}
-
-El objetivo general de este proyecto es la detección de enfermedades y plagas en el cultivo del datil medjool, mediante el uso de técnicas de visión por computadora y aprendizaje profundo.\\
+\label{Chapter2}
 
 %----------------------------------------------------------------------------------------
 
-\section{Objetivos Específicos}
+\section{Planteamiento del problema}
 
-\begin{itemize}
-    \item Implementar un sistema de detección de enfermedades y plagas en el cultivo del datil medjool.
-    \item Evaluar el rendimiento del sistema de detección mediante métricas de precisión, recall y F1-score.
-    \item Comparar el rendimiento del sistema de detección con otros métodos existentes en la literatura.
-    \item Proponer mejoras al sistema de detección basado en los resultados obtenidos.
-    \item Desarrollar una interfaz gráfica para la visualización de los resultados del sistema de detección.
-    \item Realizar pruebas de campo para validar el sistema de detección en condiciones reales de cultivo.
-\end{itemize}
+El dátil Medjool es uno de los productos agrícolas con mayor proyección comercial en el noroeste de México, especialmente en el Valle de Mexicali, donde las condiciones climáticas favorecen su producción y calidad. No obstante, uno de los principales desafíos que enfrentan productores y empacadoras es la evaluación objetiva de la calidad postcosecha del fruto, un proceso que en la mayoría de los casos sigue dependiendo de la inspección manual.\\
+
+La clasificación por madurez, el descarte de frutos con hongos internos o fermentación, y la detección de pérdida de humedad son tareas que, si bien resultan críticas, se realizan con criterios subjetivos que varían entre operarios y entre lotes. Esta falta de estandarización puede derivar en inconsistencias en el producto final, reducción en la vida útil del fruto, rechazo por parte de clientes internacionales y, en consecuencia, pérdidas económicas \parencite{perez-perez_evaluation_2021}.\\
+
+Existen tecnologías que pueden solventar estos problemas, como la visión hiperespectral y la espectroscopía NIR, que permiten detectar defectos internos, predecir contenido de agua y clasificar frutos con alta precisión \parencite{ulu_comparison_2025, yuan_determination_2025}. Sin embargo, estos sistemas suelen estar fuera del alcance económico de muchos productores, además de requerir personal capacitado y condiciones controladas para su operación.\\
+
+A pesar del crecimiento en las aplicaciones de inteligencia artificial en agricultura, los enfoques aplicados a frutos como el dátil siguen siendo limitados, y pocos estudios han explorado modelos que combinen datos visuales (RGB), espectros de luz NIR y parámetros colorimétricos en un solo sistema. Los trabajos más recientes apuntan hacia enfoques multimodales que integran varias fuentes de información para mejorar la precisión de los modelos de predicción \parencite{gupta_fruveg-net_2024, apostolopoulos_general_2023}, pero aún hay un hueco importante en su aplicación práctica al Medjool, especialmente en contextos regionales y con recursos limitados.\\
+
+Tomando todo lo anterior en cuenta, el problema central que abordará esta tesis es la falta de un sistema accesible, no destructivo y automatizado para evaluar la calidad interna y externa del dátil Medjool que sea viable tanto técnica como económicamente para su implementación en el entorno agrícola de Baja California. Resolver este problema no solo facilitaría la toma de decisiones en la postcosecha, sino que también contribuiría a elevar la competitividad del producto en mercados exigentes, reducir pérdidas y fortalecer la trazabilidad de la calidad desde el campo hasta el consumidor final.\\
 
 %----------------------------------------------------------------------------------------
 
 \section{Hipótesis}
 
-Es posible usar redes neuronales convolucionales para el analisis del datil medjool, para la detección de humerar interna en el fruto así como enfermedades y plagas en el cultivo.\\
+La integración de datos visuales (RGB), espectrales (NIR) y colorimétricos (CIELab), procesados mediante modelos de aprendizaje profundo, permite predecir de forma no destructiva y con alta precisión las variables clave de la calidad postcosecha del dátil Medjool, como el contenido de humedad, el estado de madurez y la presencia de defectos internos. Esta aproximación multimodal tiene el potencial de superar las limitaciones de los métodos manuales tradicionales, que suelen ser subjetivos, lentos y poco confiables, sobre todo en contextos de alta demanda o exportación.\\
 
+La hipótesis será evaluada desarrollando un sistema computacional entrenado con un conjunto de datos obtenidos directamente en campo y laboratorio, el cual incluirá frutos con distintas características, niveles de humedad y condiciones internas. Se espera que los modelos desarrollados puedan validar estadísticamente sus predicciones frente a mediciones de referencia, y que además, los resultados obtenidos muestren que la fusión de fuentes de información mejora significativamente el desempeño del sistema. Esta validación permitirá comprobar si es posible implementar soluciones prácticas, reproducibles y de bajo costo que beneficien directamente a productores y empacadoras de la región.\\
 
+%----------------------------------------------------------------------------------------
+
+\section{Objetivos}
+
+\subsection{Objetivos General}
+
+Desarrollar un sistema computacional basado en aprendizaje profundo que permita evaluar de forma no destructiva la calidad postcosecha del dátil Medjool producido en el Valle de Mexicali, utilizando información obtenida a partir de imágenes RGB, parámetros colorimétricos (CIELab) y datos espectrales en el rango del infrarrojo cercano (NIR), con el fin de predecir variables clave como contenido de humedad, madurez y defectos internos, y así facilitar su clasificación y selección para fines de exportación o consumo.
+
+\subsection{Objetivos Específicos}
+
+\begin{itemize}
+    \item Revisar el estado del arte sobre el uso de inteligencia artificial en la evaluación de calidad postcosecha de frutas, con énfasis en el dátil Medjool y su contexto agrícola en Baja California.
+    \item Identificar y seleccionar las variables físico-químicas más relevantes para la evaluación de calidad postcosecha del dátil Medjool, así como los métodos de adquisición y análisis más adecuados para cada tipo de dato (RGB, NIR y colorimetría).
+    \item Diseñar e implementar un protocolo de adquisición de datos para capturar imágenes RGB, espectros NIR y parámetros colorimétricos de frutos Medjool en distintas etapas de madurez y condiciones postcosecha.
+    \item Construir un dataset etiquetado con variables físico-químicas de referencia, como contenido de humedad, firmeza y condición interna del fruto.
+    \item Entrenar modelos de redes neuronales profundas para:
+    \begin{itemize}
+        \item Clasificar frutos por etapa de madurez utilizando imágenes RGB y parámetros CIELab.
+        \item Predecir el contenido de humedad a partir de espectros NIR.
+        \item Detectar posibles defectos internos o señales de descomposición no visibles superficialmente.
+    \end{itemize}
+    \item Desarrollar modelos multimodales que integren los tres tipos de datos (visual, espectral y colorimétrico) para evaluar su desempeño conjunto frente a modelos unimodales.
+    \item Validar el sistema propuesto utilizando métricas estadísticas y pruebas con muestras reales, comparando los resultados con mediciones de laboratorio.
+    \item Documentar y publicar el dataset generado, junto con los modelos desarrollados, para su reutilización en investigaciones futuras o posibles aplicaciones en otras frutas.
+    \item Evaluar la viabilidad técnica y económica del sistema en condiciones reales de empacadora, y explorar posibles rutas para su transferencia al sector agrícola local.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+
+\section{Viabilidad del proyecto}
+
+Este proyecto es viable tanto técnica como académicamente. Su enfoque no destructivo, basado en sensores ópticos, visión por computadora y aprendizaje profundo, permite adaptar soluciones de alto impacto a un contexto agrícola local sin incurrir en costos elevados.\\
+
+Desde el punto de vista técnico, el sistema propuesto puede desarrollarse utilizando cámaras RGB convencionales, iluminación controlada, sensores ópticos de bajo costo (multibanda o NIR) y plataformas de procesamiento single-board computers. Estas herramientas son compatibles con bibliotecas de código abierto como TensorFlow, Keras, PyTorch, OpenCV y Scikit-learn, lo cual permite reducir significativamente la dependencia de software propietario y equipos industriales costosos, sin sacrificar calidad en los modelos desarrollados.\\
+
+En cuanto a la obtención de muestras, existe disposición por parte de productores locales para colaborar en la recolección y etiquetado de frutos, lo cual garantiza la disponibilidad de datos reales representativos.\\
+
+Financieramente, el proyecto también contempla la búsqueda de apoyo a través de convocatorias estatales o federales orientadas a ciencia aplicada, así como esquemas de conversión con agricultores interesados en soluciones de clasificación automatizada. Esta estrategia permitiría cubrir gastos de adquisición de sensores, procesamiento de muestras en laboratorio, difusión de resultados y publicación científica.\\
+
+En conjunto, la combinación de experiencia técnica, uso de herramientas abiertas, colaboración local y un enfoque práctico de bajo costo hace que este proyecto no solo sea viable, sino también replicable y con alto potencial de impacto en la cadena productiva del dátil Medjool en Baja California.\\
+
+\section{Productos esperados}
+
+Este proyecto tiene como objetivo generar resultados concretos tanto en el ámbito científico como en su aplicación práctica. Entre los productos esperados se incluyen los siguientes:
+
+\begin{itemize}
+    \item Un sistema computacional no destructivo capaz de predecir variables críticas de calidad postcosecha del dátil Medjool —como contenido de humedad, estado de madurez y presencia de defectos internos— utilizando modelos de redes neuronales profundas y datos integrados de imagen RGB, espectros NIR y colorimetría.
+    \item Un dataset propio y curado, compuesto por imágenes, espectros ópticos, variables físico-químicas y etiquetas de calidad de frutos Medjool, recolectados en condiciones reales en el Valle de Mexicali. Este dataset será documentado y compartido públicamente bajo licencia abierta, promoviendo su reutilización por otros investigadores.
+    \item Tres artículos científicos sometidos a revistas arbitradas:
+    \begin{itemize}
+        \item Un artículo de revisión bibliográfica sobre el uso de inteligencia artificial en la evaluación de calidad postcosecha de frutas.
+        \item Un artículo metodológico que documente la construcción del dataset, protocolos de adquisición y validación cruzada.
+        \item Un artículo principal que presente los resultados del sistema inteligente desarrollado, su desempeño predictivo y posibles aplicaciones prácticas.
+    \end{itemize}
+    \item Un prototipo funcional del sistema, integrando hardware de bajo costo (cámara RGB, sensor óptico multibanda, iluminación controlada y unidad de procesamiento embebido), con una interfaz básica para visualización o clasificación automática de frutos.
+    \item Transferencia de conocimiento y colaboración con el sector agrícola local, mediante presentación de resultados en eventos técnicos y la generación de materiales de divulgación para productores, cooperativas y empacadoras.
+    \item Posibilidad de escalar o adaptar el sistema a otros frutos de la región con características similares, ampliando su impacto más allá del cultivo de dátil.
+\end{itemize}

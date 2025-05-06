@@ -1,10 +1,10 @@
 filename=main.tex
 
 pdf: clean
-	pdflatex -interaction=nonstopmode -synctex=1 $(filename)
-	bibtex $(basename $(filename))
-	pdflatex -interaction=nonstopmode -synctex=1 $(filename)
-	pdflatex -interaction=nonstopmode -synctex=1 $(filename)
+	pdflatex $(filename)
+	biber $(basename $(filename))
+	pdflatex $(filename)
+	pdflatex $(filename)
 
 pdf-ps: ps
 	ps2pdf ${filename}.ps
