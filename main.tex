@@ -42,7 +42,8 @@ headsepline, % Uncomment to get a line under the header
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
 \usepackage{mathpazo} % Use the Palatino font by default
-\usepackage{amsfonts} % Use the AMS fonts for better math support
+\usepackage{amsfonts,amsmath,amssymb} % Use the AMS fonts for better math support
+\usepackage{multicol} % Required for multiple column layout
 
 \usepackage[backend=biber, style=authoryear, language=english, natbib=true]{biblatex} % Use the biber backend with the authoryear citation style (which resembles APA)
 % Fuerza idioma inglés en citas y bibliografía
@@ -50,8 +51,7 @@ headsepline, % Uncomment to get a line under the header
 \AtEveryCitekey{\selectlanguage{english}}
 \DefineBibliographyExtras{english}{\def\finalnamedelim{\addspace\&\space}} % Cambia "and" por "&" entre autores
 
-\addbibresource{example.bib} % The filename of the bibliography
-\addbibresource{palm-dates.bib}
+\addbibresource{palm-dates.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 

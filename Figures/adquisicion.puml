@@ -1,0 +1,25 @@
+@startuml
+title Flujo Simplificado de Adquisición e Integración de Datos
+
+start
+:Inicio del proceso de adquisición;
+:Seleccionar muestra de dátil;
+
+:Capturar imagen RGB;
+:Adquirir espectro NIR;
+:Obtener parámetros CIELab;
+
+:Realizar medición física y/o química de referencia;
+note right
+  - Humedad
+  - Firmeza
+  - Estado interno
+end note
+
+:Asignar etiqueta de calidad;
+
+:Unificar e integrar datos en un solo registro;
+:Almacenar en dataset estructurado;
+
+stop
+@enduml
