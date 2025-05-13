@@ -20,11 +20,11 @@ Tomando todo lo anterior en cuenta, el problema central que abordará esta tesis
 
 %----------------------------------------------------------------------------------------
 
-\section{Hipótesis}
+\subsection{Hipótesis}
 
-La integración de datos visuales (RGB), espectrales (NIR) y colorimétricos (CIELab), procesados mediante modelos de aprendizaje profundo, permite predecir de forma no destructiva y con alta precisión las variables clave de la calidad postcosecha del dátil Medjool, como el contenido de humedad, el estado de madurez y la presencia de defectos internos. Esta aproximación multimodal tiene el potencial de superar las limitaciones de los métodos manuales tradicionales, que suelen ser subjetivos, lentos y poco confiables, sobre todo en contextos de alta demanda o exportación.\\
+La combinación de información visual (RGB), espectral (NIR) y colorimétrica (CIELab) permite construir un enfoque multimodal basado en aprendizaje profundo capaz de predecir de forma no destructiva variables clave de calidad postcosecha en frutos de dátil Medjool, tales como el contenido de humedad, el estado interno o el grado de madurez.\\
 
-La hipótesis será evaluada desarrollando un sistema computacional entrenado con un conjunto de datos obtenidos directamente en campo y laboratorio, el cual incluirá frutos con distintas características, niveles de humedad y condiciones internas. Se espera que los modelos desarrollados puedan validar estadísticamente sus predicciones frente a mediciones de referencia, y que además, los resultados obtenidos muestren que la fusión de fuentes de información mejora significativamente el desempeño del sistema. Esta validación permitirá comprobar si es posible implementar soluciones prácticas, reproducibles y de bajo costo que beneficien directamente a productores y empacadoras de la región.
+Se espera que la integración de estas modalidades proporcione un desempeño superior respecto a enfoques unimodales o tradicionales, tanto en términos de precisión estadística como de aplicabilidad práctica. Asimismo, se considera que los modelos desarrollados permitirán validar cuantitativamente sus predicciones frente a mediciones de referencia, evidenciando el potencial de esta aproximación para su futura implementación en contextos agrícolas reales.
 
 %----------------------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ Evaluar la eficacia de un enfoque multimodal basado en aprendizaje profundo para
 \begin{itemize}
     \item Identificar y seleccionar las variables físico-químicas más relevantes para la evaluación de calidad postcosecha del dátil Medjool, así como los métodos de adquisición y análisis más adecuados para cada tipo de dato (RGB, NIR y colorimetría).
     \item Analizar el grado de correlación entre variables físicas y químicas del fruto (como contenido de humedad y firmeza) y los datos obtenidos por sensores ópticos no destructivos (RGB, NIR, CIELab).
-    \item Diseñar y comparar modelos de aprendizaje profundo (CNN, MLP, modelos híbridos) que utilicen distintos tipos de datos (visuales, espectrales y colorimétricos) para predecir variables críticas de calidad del fruto.
+    \item Diseñar y comparar modelos de aprendizaje profundo (CNN, Modelos Multicapa de Percepción, modelos híbridos) que utilicen distintos tipos de datos (visuales, espectrales y colorimétricos) para predecir variables críticas de calidad del fruto.
     \item Evaluar el impacto de la integración de datos multimodales sobre el desempeño predictivo de los modelos, en comparación con modelos unimodales y con métodos tradicionales de clasificación y análisis.
     \item Examinar la interpretabilidad de los modelos generados mediante técnicas de inteligencia artificial explicable (XAI), para identificar qué variables o patrones influyen más en las decisiones del sistema.
     \item Validar experimentalmente la factibilidad técnica, predictiva y operativa del enfoque propuesto en condiciones reales del proceso postcosecha del dátil Medjool en el Valle de Mexicali.
@@ -64,7 +64,6 @@ En conjunto, la combinación de experiencia técnica, uso de herramientas abiert
 Este proyecto tiene como objetivo generar resultados concretos tanto en el ámbito científico como en su aplicación práctica. Entre los productos esperados se incluyen los siguientes:
 
 \begin{itemize}
-    \item Un sistema computacional no destructivo capaz de predecir variables críticas de calidad postcosecha del dátil Medjool —como contenido de humedad, estado de madurez y presencia de defectos internos— utilizando modelos de redes neuronales profundas y datos integrados de imagen RGB, espectros NIR y colorimetría.
     \item Un dataset propio y curado, compuesto por imágenes, espectros ópticos, variables físico-químicas y etiquetas de calidad de frutos Medjool, recolectados en condiciones reales en el Valle de Mexicali. Este dataset será documentado y compartido públicamente bajo licencia abierta, promoviendo su reutilización por otros investigadores.
     \item Tres artículos científicos sometidos a revistas arbitradas:
     \begin{itemize}

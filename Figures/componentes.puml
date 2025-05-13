@@ -1,101 +1,25 @@
 @startuml
-title Diagrama de Componentes: Estructura CRISP-DM para Dátil Medjool
+'title Diagrama de Componentes: Estructura CRISP-DM para Dátil Medjool
 
 'left to right direction
 
-package "CRISP-DM" {
+package "CRISP-DM adaptado" {
   [1. Comprensión del negocio]
   [2. Comprensión de los datos]
   [3. Preparación de los datos]
   [4. Modelado]
   [5. Evaluación]
-  [6. Implementación]
+  [6. Prototipado]
 }
-
-' package "1. Comprensión del Negocio" {
-'   [Productores]
-'   [Expertos Académicos]
-'   [Objetivos de calidad]
-' }
-
-' package "2. Comprensión de los Datos" {
-'   [Muestras de fruto]
-'   [Pruebas físico-químicas]
-' }
-
-' package "3. Preparación de Datos" {
-'   [Sensor RGB]
-'   [Sensor NIR]
-'   [Parámetros CIELab]
-'   [Preprocesamiento]
-' }
-
-' package "4. Modelado" {
-'   [Modelos Unimodales]
-'   [Modelos Multimodales]
-'   [Evaluación de Métricas]
-' }
-
-' package "5. Evaluación" {
-'   [Métricas de Desempeño]
-'   [Técnicas XAI]
-' }
-
-' package "6. Implementación" {
-'   [API REST]
-'   [Aplicación embebida]
-'   [Notebook interactivo]
-' }
-
-' [Productores] --> [Objetivos de calidad]
-' [Expertos Académicos] --> [Objetivos de calidad]
-' [Objetivos de calidad] --> [Muestras de fruto]
-' [Muestras de fruto] --> [Pruebas físico-químicas]
-' [Pruebas físico-químicas] --> [Preprocesamiento]
-' [Sensor RGB] --> [Preprocesamiento]
-' [Sensor NIR] --> [Preprocesamiento]
-' [Parámetros CIELab] --> [Preprocesamiento]
-' [Preprocesamiento] --> [Modelos Unimodales]
-' [Preprocesamiento] --> [Modelos Multimodales]
-' [Modelos Multimodales] --> [Evaluación de Métricas]
-' [Evaluación de Métricas] --> [Técnicas XAI]
-' [Técnicas XAI] --> [API REST]
-' [Técnicas XAI] --> [Aplicación embebida]
-' [Técnicas XAI] --> [Notebook interactivo]
 
 [1. Comprensión del negocio] -d-> [2. Comprensión de los datos]
 [2. Comprensión de los datos] -d-> [3. Preparación de los datos]
 [3. Preparación de los datos] -r-> [4. Modelado]
 [4. Modelado] -u-> [5. Evaluación]
-[5. Evaluación] -u-> [6. Implementación]
+[5. Evaluación] -u-> [6. Prototipado]
 
 ' Loopbacks típicos de CRISP-DM
 [5. Evaluación] --> [3. Preparación de los datos] : Ajustes
 [5. Evaluación] --> [4. Modelado] : Reentrenamiento
-[6. Implementación] -l-> [1. Comprensión del negocio] : Retroalimentación
+[6. Prototipado] -l-> [1. Comprensión del negocio] : Retroalimentación
 @enduml
-
-' @startuml
-' title CRISP-DM Adaptado al Estudio de Calidad Postcosecha del Dátil Medjool
-
-' package "CRISP-DM" {
-'   [1. Comprensión del negocio]
-'   [2. Comprensión de los datos]
-'   [3. Preparación de los datos]
-'   [4. Modelado]
-'   [5. Evaluación]
-'   [6. Implementación]
-' }
-
-' [1. Comprensión del negocio] --> [2. Comprensión de los datos]
-' [2. Comprensión de los datos] --> [3. Preparación de los datos]
-' [3. Preparación de los datos] --> [4. Modelado]
-' [4. Modelado] --> [5. Evaluación]
-' [5. Evaluación] --> [6. Implementación]
-
-' ' Loopbacks típicos de CRISP-DM
-' [5. Evaluación] --> [3. Preparación de los datos] : Ajustes
-' [5. Evaluación] --> [4. Modelado] : Retrain
-' [6. Implementación] --> [1. Comprensión del negocio] : Feedback
-
-' @enduml
