@@ -12,7 +12,7 @@ El uso de inteligencia artificial en el sector agroalimentario ha crecido signif
 
 \parencite{kamilaris_deep_2018} realizaron una revisión temprana sobre el uso de redes neuronales y visión por computadora en agricultura, estableciendo las bases para su uso en tareas de clasificación de cultivos y análisis de calidad. Estudios como el de \parencite{garcia_vazquez_scientometric_2021, upadhyay_artificial_2025} han documentado el crecimiento de estas aplicaciones, enfatizando la necesidad de enfoques más integrales y adaptados a entornos reales.\\
 
-En los últimos años, la disponibilidad de \textit{datasets} públicos relacionados con la evaluación de dátiles y otros frutos ha crecido de forma considerable. Estos \textit{datasets}, que pueden incluir imágenes etiquetadas por madurez, espectros ópticos o atributos físico-químicos, han permitido el desarrollo y comparación de modelos de clasificación, segmentación y regresión en distintas condiciones experimentales. Algunos de estos recursos se centran en variedades específicas como Medjool o Mejhoul, y otros en condiciones agrícolas más generales. La revisión de estos conjuntos de datos es útil no solo para complementar el entrenamiento de modelos, sino también como referencia para el diseño de nuevas estrategias de adquisición de datos. En la Tabla~\ref{tab:datasets} se presenta una síntesis de los \textit{datasets} más relevantes identificados durante la revisión bibliográfica.\\
+En los últimos años, la disponibilidad de \textit{datasets} públicos relacionados con la evaluación de dátiles y otros frutos ha crecido de forma considerable. Estos \textit{datasets}, que pueden incluir imágenes etiquetadas por madurez, espectros ópticos o atributos físico-químicos, han permitido el desarrollo y comparación de modelos de clasificación, segmentación y regresión en distintas condiciones experimentales. Algunos de estos recursos se centran en variedades específicas como Medjool o Mejhoul, y otros en condiciones agrícolas más generales. La revisión de estos conjuntos de datos es útil no solo para complementar el entrenamiento de modelos, sino también como referencia para el diseño de nuevas estrategias de adquisición de datos. En la Tabla \ref{tab:datasets} se presenta una síntesis de los \textit{datasets} más relevantes identificados durante la revisión bibliográfica.\\
 
 En el caso específico de frutas, múltiples autores han demostrado la eficacia de modelos convolucionales para clasificar variedades, predecir estado de madurez o detectar enfermedades superficiales \parencite{rybacki_convolutional_2024, gill_fruit_2023, almomen_date_2023}. Estos algoritmos aprenden directamente de las imágenes y permiten eliminar pasos de preprocesamiento complejos, siempre que cuenten con \textit{datasets} balanceados y representativos.\\
 
@@ -22,7 +22,7 @@ Una tendencia emergente es la integración de distintos tipos de datos en modelo
 
 Aunque estas técnicas han sido aplicadas exitosamente en frutas como manzana, mango, papaya y jujube, su implementación en \textit{Phoenix dactylifera L.}, y en particular en el dátil Medjool cultivado en México, aún está poco documentada. Algunos trabajos recientes han explorado la clasificación superficial mediante \textit{CNNs} \parencite{perez-perez_evaluation_2021}, pero la evaluación de características internas sigue siendo un campo abierto, especialmente desde una perspectiva de bajo costo y accesibilidad técnica.\\
 
-En línea con la necesidad de hacer los modelos de aprendizaje profundo más transparentes y confiables, ha surgido un campo conocido como inteligencia artificial explicable (\textit{XAI}). Técnicas como Grad-CAM, utilizada para visualizar regiones activadas en \textit{CNNs} aplicadas a imágenes, o SHAP, aplicada a modelos de regresión o clasificación con datos espectrales, permiten interpretar cómo y por qué un modelo toma determinadas decisiones. Estas herramientas no solo ayudan a mejorar la confianza en el sistema, sino que también permiten detectar posibles sesgos o errores estructurales en el entrenamiento \parencite{russel_wavelet_2024, gupta_fruveg-net_2024}.\\
+En línea con la necesidad de hacer los modelos de aprendizaje profundo más transparentes y confiables, ha surgido un campo conocido como inteligencia artificial explicable (\textit{XAI}). Técnicas como \textit{Grad-CAM}, utilizada para visualizar regiones activadas en \textit{CNNs} aplicadas a imágenes, o \textit{SHAP}, aplicada a modelos de regresión o clasificación con datos espectrales, permiten interpretar cómo y por qué un modelo toma determinadas decisiones. Estas herramientas no solo ayudan a mejorar la confianza en el sistema, sino que también permiten detectar posibles sesgos o errores estructurales en el entrenamiento \parencite{russel_wavelet_2024, gupta_fruveg-net_2024}.\\
 
 Por lo tanto, existe un área de oportunidad clara para aplicar y adaptar estos avances al caso del dátil Medjool, desarrollando soluciones tecnológicamente viables para productores de la región que necesitan herramientas confiables, no destructivas y económicas.
 
@@ -32,14 +32,14 @@ Por lo tanto, existe un área de oportunidad clara para aplicar y adaptar estos 
 
 \section{Metodología}
 
-La metodología de este estudio se basa en una adaptación del modelo CRISP-DM (Cross-Industry Standard Process for Data Mining), una de las guías más reconocidas y utilizadas en ciencia de datos aplicada. CRISP-DM organiza el proceso analítico en seis fases cíclicas: comprensión del negocio, comprensión de los datos, preparación de los datos, modelado, evaluación e implementación. Su carácter flexible e iterativo permite adaptarse a distintas áreas del conocimiento, incluyendo dominios con datos no estructurados, como es el caso de los sistemas agrícolas \parencite{shimaoka_evolution_2024, saltz_crisp-dm_2021}. En este trabajo, la metodología se ha modificado para ajustarse al contexto particular de la evaluación de calidad postcosecha del dátil Medjool, integrando técnicas de aprendizaje profundo, sensores ópticos y validación experimental en condiciones reales.
+La metodología de este estudio está basada en una adaptación del modelo \textit{CRISP-DM} (\textit{Cross-Industry Standard Process for Data Mining}), una de las guías más reconocidas y utilizadas en ciencia de datos aplicada. En la Figura \ref{fig:componentes} se muestra como \textit{CRISP-DM} organiza el proceso analítico en seis fases cíclicas: comprensión del negocio, comprensión de los datos, preparación de los datos, modelado, evaluación e implementación. Su carácter flexible e iterativo permite adaptarse a distintas áreas del conocimiento, incluyendo dominios con datos no estructurados, como es el caso de los sistemas agrícolas \parencite{shimaoka_evolution_2024, saltz_crisp-dm_2021}. En este trabajo, la metodología se ha modificado para ajustarse al contexto particular de la evaluación de calidad postcosecha del dátil Medjool, integrando técnicas de aprendizaje profundo, sensores ópticos y validación experimental en condiciones reales.
 
 \begin{figure}[th]
 \centering
 \includegraphics[scale=0.75]{Figures/componentes.png}
 \decoRule
-\caption{Diagrama de componentes CRISP-DM ajustado a nuestro propósito.}
-\label{fig:Componentes_CRISP-DM}
+\caption{Diagrama de componentes \textit{CRISP-DM} ajustado.}
+\label{fig:componentes}
 \end{figure}
 
 \subsection{Fase 1: Comprensión del dominio agrícola y científico}
@@ -56,11 +56,12 @@ Esta fase se enfoca en el análisis exploratorio de las muestras que conformará
 
 Antes de cualquier intervención destructiva, cada fruto será sometido a la adquisición de imágenes \textit{RGB} en condiciones controladas, junto con la medición de espectros en el rango infrarrojo cercano y la estimación colorimétrica en el espacio CIELab. Estos datos ópticos se obtendrán de forma no invasiva, asegurando que el estado del fruto se registre de manera íntegra para ser correlacionado posteriormente con las variables físico-químicas de referencia. Esta precaución es esencial, ya que algunas de las pruebas subsiguientes, como la evaluación interna o la determinación del contenido de humedad, implican la destrucción de la muestra.\\
 
-Cada muestra será sometida a una serie de mediciones físico-químicas que funcionarán como etiquetas de referencia para el posterior entrenamiento y validación de modelos. El contenido de humedad será determinado, idealmente, mediante el método de secado en horno con peso constante, que constituye el estándar de referencia por su precisión. La firmeza será evaluada mediante instrumentos como texturómetros o penetrómetros digitales, que permiten cuantificar la resistencia mecánica del tejido en unidades estandarizadas. Por su parte, el estado interno del fruto se determinará mediante inspección visual tras un corte, permitiendo registrar la presencia de defectos como fermentación interna, colapso del mesocarpio o desarrollo de hongos.
+Cada muestra será sometida a una serie de mediciones físico-químicas que funcionarán como etiquetas de referencia para el posterior entrenamiento y validación de modelos. El contenido de humedad será determinado, idealmente, mediante el método de secado en horno con peso constante, que constituye el estándar de referencia por su precisión. La firmeza será evaluada mediante instrumentos como texturómetros o penetrómetros digitales, que permiten cuantificar la resistencia mecánica del tejido en unidades estandarizadas. Por su parte, el estado interno del fruto se determinará mediante inspección visual tras un corte, permitiendo registrar la presencia de defectos como fermentación interna, colapso del mesocarpio o desarrollo de hongos. La Tabla \ref{tab:metodos} resume las variables a medir y los métodos de adquisición propuestos.\\
 
 \begin{table}[h]
+\footnotesize
 \centering
-\begin{tabular}{|p{5cm}|p{2.5cm}|p{3cm}|p{4cm}|}
+\begin{tabular}{|p{5cm}|p{2.5cm}|p{3cm}|p{2.5cm}|}
 \hline
 \textbf{Título del artículo} & \textbf{Variedad(es)} & \textbf{Tipo de datos} & \textbf{Acceso al \textit{dataset}} \\
 \hline
@@ -86,12 +87,13 @@ Cada muestra será sometida a una serie de mediciones físico-químicas que func
 \label{tab:datasets}
 \end{table}
 
-Complementariamente, se llevará a cabo una búsqueda y análisis de \textit{datasets} públicos que hayan sido utilizados en estudios previos sobre evaluación de dátiles u otros frutos similares. Se revisarán bases de datos abiertos disponibles en artículos científicos recientes, con énfasis en aquellos que incluyen imágenes \textit{RGB}, espectros \textit{NIR}, parámetros físico-químicos o etiquetas de clasificación. Estos recursos podrán ser aprovechados para extender el análisis, validar modelos en contextos externos o comparar el desempeño del enfoque desarrollado con resultados publicados.\\
+Complementariamente, se llevará a cabo una búsqueda y análisis de \textit{datasets} públicos que hayan sido utilizados en estudios previos sobre evaluación de dátiles u otros frutos similares, algunos se muestran en la Tabla \ref{tab:datasets}. Se revisarán bases de datos abiertos disponibles en artículos científicos recientes, con énfasis en aquellos que incluyen imágenes \textit{RGB}, espectros \textit{NIR}, parámetros físico-químicos o etiquetas de clasificación. Estos recursos podrán ser aprovechados para extender el análisis, validar modelos en contextos externos o comparar el desempeño del enfoque desarrollado con resultados publicados.\\
 
 Este conjunto de acciones permitirá construir una base de datos robusta y representativa, que combine observaciones empíricas locales con referencias científicas reconocidas, y que sirva de soporte para el diseño y evaluación de modelos predictivos no destructivos en fases posteriores.
 
 \begin{table}[h]
 \centering
+\footnotesize
 \begin{tabular}{|p{4.5cm}|p{9cm}|}
 \hline
 \textbf{Variable} & \textbf{Método de medición} \\
@@ -124,23 +126,15 @@ Secado en horno con peso constante:
 
 \subsection{Fase 3: Preparación de los datos}
 
-Una vez obtenidas las muestras, se realizará la organización y procesamiento de los datos recolectados para su análisis. En esta fase se integrará la información proveniente de múltiples fuentes, incluyendo las imágenes \textit{RGB} de los frutos, los espectros en el rango infrarrojo cercano (\textit{NIR}), los parámetros colorimétricos extraídos (L*, a*, b*), así como las mediciones físico-químicas de referencia obtenidas en laboratorio o por inspección directa.\\
+Una vez obtenidas las muestras, se realizará la organización y procesamiento de los datos recolectados para su análisis. En esta fase se integrará la información proveniente de múltiples fuentes, incluyendo las imágenes \textit{RGB} de los frutos, los espectros en el rango infrarrojo cercano (\textit{NIR}), los parámetros colorimétricos extraídos (L*, a*, b*), así como las mediciones físico-químicas de referencia obtenidas en laboratorio o por inspección directa. La Figura \ref{fig:adquisicion} en el \nameref{AnexoA} muestra una versión simplificada del flujo a seguir.\\
 
 Cada unidad de análisis (es decir, cada fruto individual) será representada por un conjunto estructurado de datos que combinará estas distintas modalidades. Para ello, se establecerán identificadores únicos por muestra que permitan sincronizar correctamente los distintos tipos de entrada y sus etiquetas. El procesamiento de datos incluirá la limpieza de registros incompletos, la eliminación de ruido espectral, y la normalización de valores numéricos a través de métodos como Savitzky-Golay para espectros y estandarización Z-score para otras variables.\\
 
 El resultado de esta fase será un conjunto de datos multimodal, limpio y organizado, adecuado para su uso en tareas supervisadas de clasificación y regresión. Este \textit{dataset} representará tanto las características ópticas del fruto como su estado físico-químico confirmado, permitiendo entrenar modelos que busquen inferir calidad postcosecha de manera no destructiva. Además, la estructura de los datos permitirá comparar el desempeño de modelos unimodales (basados en un solo tipo de entrada) frente a modelos multimodales, como parte del análisis posterior.
 
-\begin{figure}[th]
-\centering
-\includegraphics[scale=0.75]{Figures/adquisicion.png}
-\decoRule
-\caption{Diagrama de adquisición de variables físico-químicas.}
-\label{fig:Diagrama_Adquisicion}
-\end{figure}
-
 \subsection{Fase 4: Modelado}
 
-En esta fase se diseñará y entrenará un conjunto de modelos de aprendizaje supervisado con el objetivo de predecir variables críticas de calidad postcosecha del dátil Medjool a partir de los datos ópticos multimodales obtenidos. Los modelos desarrollados abarcarán tanto enfoques unimodales (basados en un solo tipo de entrada como espectros \textit{NIR} o imágenes \textit{RGB}/CIELab) como enfoques multimodales que integren múltiples tipos de datos de manera simultánea (\textit{RGB}/CIELab + \textit{NIR}).\\
+En esta fase se diseñará y entrenará un conjunto de modelos de aprendizaje supervisado con el objetivo de predecir variables críticas de calidad postcosecha del dátil Medjool a partir de los datos ópticos multimodales obtenidos. Los modelos desarrollados abarcarán tanto enfoques unimodales (basados en un solo tipo de entrada como espectros \textit{NIR} o imágenes \textit{RGB}) como enfoques multimodales que integren múltiples tipos de datos de manera simultánea (\textit{RGB} + \textit{NIR}).\\
 
 Para las tareas de clasificación, como la detección de defectos internos o categorización de madurez, se entrenarán modelos de \textit{CNNs} aplicadas a imágenes, y modelos multicapas densamente conectados (\textit{MLP}) aplicados a espectros. En las tareas de regresión, especialmente en la predicción del contenido de humedad, se evaluarán tanto modelos de redes neuronales como métodos clásicos de regresión multivariada como \textit{PLSR} (\textit{Partial Least Squares Regression}), que servirán como línea base para la comparación.\\
 
@@ -154,24 +148,13 @@ La fase de evaluación tiene como objetivo valorar el desempeño del enfoque mul
 
 Además del análisis numérico, se integrarán herramientas de \textit{XAI} que permitirán interpretar el comportamiento interno de los modelos. Estas técnicas ofrecen una forma de visualizar qué variables influyen más en las predicciones, brindando transparencia a los procesos de inferencia. Se empleará \textit{Grad-CAM} para analizar activaciones en modelos basados en imágenes, y \textit{SHAP} para modelos que utilicen entradas espectrales o numéricas \parencite{lundberg_unified_2017}. Esta combinación permitirá contrastar las predicciones con el conocimiento experto y detectar posibles sesgos, patrones significativos o errores sistemáticos.\\
 
-La validación científica del enfoque no dependerá exclusivamente de la precisión del modelo, sino también de su capacidad para ser entendido, adaptado y aplicado en contextos reales como el manejo postcosecha del dátil Medjool.
+Para los métodos propuestos, se considerarán las siguientes métricas de evaluación:
+\begin{itemize}
+    \item \textbf{Regresión:} \textit{RMSE}, \textit{MAE}, \textit{R2}.
+    \item \textbf{Clasificación:} Precisión, sensibilidad, \textit{F1-score}, \textit{AUC-ROC}.
+\end{itemize}
 
-\subsubsection*{Métricas de evaluación utilizadas}
-
-El desempeño de los modelos será evaluado con métricas específicas según la naturaleza del problema. En tareas de regresión, como la predicción del contenido de humedad, se utilizará el error absoluto medio (\textit{MAE}) que indica la magnitud promedio de los errores absolutos entre las predicciones y los valores reales; la raíz del error cuadrático medio (\textit{RMSE}) que es el promedio cuadrático de los errores entre valores reales y predichos, penaliza más los errores grandes y es útil cuando se desea evitar desviaciones severas; y el coeficiente de determinación (\textit{$R^2$}) indica qué proporción de la varianza total de los datos es explicada por el modelo, un \textit{$R^2$} cercano a 1 indica que el modelo explica bien la variabilidad observada.\\
-
-Para tareas de clasificación, como la identificación de defectos internos o la categorización por madurez, se aplicarán métricas como la precisión (\textit{accuracy}) que indica la proporción total de aciertos del modelo sobre todas las predicciones realizadas, una precisión alta sugiere que el modelo clasifica correctamente tanto positivos como negativos y es útil cuando las clases están balanceadas; la sensibilidad (\textit{recall}) mide la capacidad del modelo para detectar correctamente los casos positivos reales, importante cuando las consecuencias de no detectar un positivo (falsos negativos) son altas; y la especificidad que evalúa la capacidad del modelo para detectar correctamente los casos negativos reales, útil cuando es crítico no generar falsas alarmas. También se utilizará el \textit{F1-score}, el cual es la media armónica entre la precisión y la sensibilidad, se usa cuando hay clases desbalanceadas y valora tanto la exactitud como la cobertura del modelo en positivos. Finalmente, el área bajo la curva de la característica operativa del receptor (\textit{AUC-ROC} por sus siglas en inglés) resume la capacidad del modelo para distinguir entre clases en todos los umbrales de decisión cuanto más cercano a 1, mejor la discriminación; un \textit{AUC} de 0.5 indica rendimiento aleatorio.\\
-
-La combinación de estas métricas ofrece una evaluación integral del rendimiento del modelo, no solo desde una perspectiva estadística, sino también funcional, considerando su aplicabilidad en contextos reales de análisis no destructivo en agricultura \parencite{chlingaryan_machine_2018}.
-
-% Median absolute error $\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$
-% Precisión $\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}$
-% Sensibilidad $\text{Recall} = \frac{TP}{TP + FN}$
-% Especificidad $\text{Specificity} = \frac{TN}{TN + FP}$
-% F1-score $F1 = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$
-% Área bajo la curva ROC $Se calcula como el área bajo la curva de TPR vs FPR.$
-% Raíz del error cuadrático medio $\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}$
-% Coeficiente de determinación $R^2 = 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$
+Estas métricas permitirán evaluar tanto la precisión de los modelos como su capacidad para generalizar a nuevas muestras y su interpretabilidad, lo que es crucial para la confianza en aplicaciones prácticas. En el \nameref{AnexoB} se habla de forma más detallada sobre cada una de estas métricas y su aplicación en el contexto del presente estudio.
 
 \subsection{Fase 6: Prototipado}
 

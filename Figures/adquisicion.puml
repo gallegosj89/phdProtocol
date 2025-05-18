@@ -1,13 +1,16 @@
 @startuml
-title Flujo Simplificado de Adquisición e Integración de Datos
+title Flujo de Adquisición e Integración de Datos
+
+!theme mono
+
+'left to right direction
 
 start
-:Inicio del proceso de adquisición;
 :Seleccionar muestra de dátil;
 
-:Capturar imagen RGB;
-:Adquirir espectro NIR;
-:Obtener parámetros CIELab;
+:Capturar datos ópticos RGB y NIR;
+
+:Ajustar datos ópticos a un formato estándar;
 
 :Realizar medición física y/o química de referencia;
 note right

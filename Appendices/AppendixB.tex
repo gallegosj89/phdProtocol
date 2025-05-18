@@ -1,0 +1,17 @@
+\chapter*{Anexo B}
+\label{AnexoB}
+
+El desempeño de los modelos será evaluado con métricas específicas según la naturaleza del problema. En tareas de regresión, como la predicción del contenido de humedad, se utilizará el error absoluto medio (\textit{MAE}) que indica la magnitud promedio de los errores absolutos entre las predicciones y los valores reales; la raíz del error cuadrático medio (\textit{RMSE}) que es el promedio cuadrático de los errores entre valores reales y predichos, penaliza más los errores grandes y es útil cuando se desea evitar desviaciones severas; y el coeficiente de determinación (\textit{$R^2$}) indica qué proporción de la varianza total de los datos es explicada por el modelo, un \textit{$R^2$} cercano a 1 indica que el modelo explica bien la variabilidad observada.\\
+
+Para tareas de clasificación, como la identificación de defectos internos o la categorización por madurez, se aplicarán métricas como la precisión (\textit{accuracy}) que indica la proporción total de aciertos del modelo sobre todas las predicciones realizadas, una precisión alta sugiere que el modelo clasifica correctamente tanto positivos como negativos y es útil cuando las clases están balanceadas; la sensibilidad (\textit{recall}) mide la capacidad del modelo para detectar correctamente los casos positivos reales, importante cuando las consecuencias de no detectar un positivo (falsos negativos) son altas; y la especificidad que evalúa la capacidad del modelo para detectar correctamente los casos negativos reales, útil cuando es crítico no generar falsas alarmas. También se utilizará el \textit{F1-score}, el cual es la media armónica entre la precisión y la sensibilidad, se usa cuando hay clases desbalanceadas y valora tanto la exactitud como la cobertura del modelo en positivos. Finalmente, el área bajo la curva de la característica operativa del receptor (\textit{AUC-ROC} por sus siglas en inglés) resume la capacidad del modelo para distinguir entre clases en todos los umbrales de decisión cuanto más cercano a 1, mejor la discriminación; un \textit{AUC} de 0.5 indica rendimiento aleatorio.\\
+
+La combinación de estas métricas ofrece una evaluación integral del rendimiento del modelo, no solo desde una perspectiva estadística, sino también funcional, considerando su aplicabilidad en contextos reales de análisis no destructivo en agricultura \parencite{chlingaryan_machine_2018}.
+
+% Median absolute error $\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$
+% Precisión $\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}$
+% Sensibilidad $\text{Recall} = \frac{TP}{TP + FN}$
+% Especificidad $\text{Specificity} = \frac{TN}{TN + FP}$
+% F1-score $F1 = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$
+% Área bajo la curva ROC $Se calcula como el área bajo la curva de TPR vs FPR.$
+% Raíz del error cuadrático medio $\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}$
+% Coeficiente de determinación $R^2 = 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$

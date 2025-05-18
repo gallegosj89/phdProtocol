@@ -3,6 +3,8 @@
 
 'left to right direction
 
+!theme mono
+
 package "CRISP-DM adaptado" {
   [1. Comprensión del negocio]
   [2. Comprensión de los datos]
