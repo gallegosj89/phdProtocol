@@ -12,9 +12,9 @@ El dátil Medjool es uno de los productos agrícolas con mayor proyección comer
 
 La clasificación por madurez, el descarte de frutos con hongos internos o fermentación, y la detección de pérdida de humedad son tareas que, si bien resultan críticas, se realizan con criterios subjetivos que varían entre operarios y entre lotes. Esta falta de estandarización puede derivar en inconsistencias en el producto final, reducción en la vida útil del fruto, rechazo por parte de clientes internacionales y, en consecuencia, pérdidas económicas \parencite{perez-perez_evaluation_2021}.\\
 
-Existen tecnologías que pueden solventar estos problemas, como la visión hiperespectral y la espectroscopía NIR, que permiten detectar defectos internos, predecir contenido de agua y clasificar frutos con alta precisión \parencite{ulu_comparison_2025, yuan_determination_2025}. Sin embargo, estos sistemas suelen estar fuera del alcance económico de muchos productores, además de requerir personal capacitado y condiciones controladas para su operación.\\
+Existen tecnologías que pueden solventar estos problemas, como la visión hiperespectral y la espectroscopía \textit{NIR}, que permiten detectar defectos internos, predecir contenido de agua y clasificar frutos con alta precisión \parencite{ulu_comparison_2025, yuan_determination_2025}. Sin embargo, estos sistemas suelen estar fuera del alcance económico de muchos productores, además de requerir personal capacitado y condiciones controladas para su operación.\\
 
-A pesar del crecimiento en las aplicaciones de inteligencia artificial en agricultura, los enfoques aplicados a frutos como el dátil siguen siendo limitados, y pocos estudios han explorado modelos que combinen datos visuales (RGB), espectros de luz NIR y parámetros colorimétricos en un solo sistema. Los trabajos más recientes apuntan hacia enfoques multimodales que integran varias fuentes de información para mejorar la precisión de los modelos de predicción \parencite{gupta_fruveg-net_2024, apostolopoulos_general_2023}, pero aún hay un hueco importante en su aplicación práctica al Medjool, especialmente en contextos regionales y con recursos limitados.\\
+A pesar del crecimiento en las aplicaciones de inteligencia artificial en agricultura, los enfoques aplicados a frutos como el dátil siguen siendo limitados, y pocos estudios han explorado modelos que combinen datos visuales (\textit{RGB}), espectros de luz \textit{NIR} y parámetros colorimétricos en un solo sistema. Los trabajos más recientes apuntan hacia enfoques multimodales que integran varias fuentes de información para mejorar la precisión de los modelos de predicción \parencite{gupta_fruveg-net_2024, apostolopoulos_general_2023}, pero aún hay un hueco importante en su aplicación práctica al dátil Medjool, especialmente en contextos regionales y con recursos limitados.\\
 
 Tomando todo lo anterior en cuenta, el problema central que abordará esta tesis es la falta de un sistema accesible, no destructivo y automatizado para evaluar la calidad interna y externa del dátil Medjool que sea viable tanto técnica como económicamente para su implementación en el entorno agrícola de Baja California. Resolver este problema no solo facilitaría la toma de decisiones en la postcosecha, sino que también contribuiría a elevar la competitividad del producto en mercados exigentes, reducir pérdidas y fortalecer la trazabilidad de la calidad desde el campo hasta el consumidor final.
 
@@ -22,7 +22,7 @@ Tomando todo lo anterior en cuenta, el problema central que abordará esta tesis
 
 \subsection{Hipótesis}
 
-La combinación de información visual (RGB), espectral (NIR) y colorimétrica (CIELab) permite construir un enfoque multimodal basado en aprendizaje profundo capaz de predecir de forma no destructiva variables clave de calidad postcosecha en frutos de dátil Medjool, tales como el contenido de humedad, el estado interno o el grado de madurez.\\
+La combinación de información visual (\textit{RGB}), espectral (\textit{NIR}) y colorimétrica (CIELab) permite construir un enfoque multimodal basado en aprendizaje profundo capaz de predecir, de forma no destructiva, variables clave de calidad postcosecha en frutos de dátil Medjool, tales como el contenido de humedad, el estado interno o el grado de madurez.\\
 
 Se espera que la integración de estas modalidades proporcione un desempeño superior respecto a enfoques unimodales o tradicionales, tanto en términos de precisión estadística como de aplicabilidad práctica. Asimismo, se considera que los modelos desarrollados permitirán validar cuantitativamente sus predicciones frente a mediciones de referencia, evidenciando el potencial de esta aproximación para su futura implementación en contextos agrícolas reales.
 
@@ -37,11 +37,11 @@ Evaluar la eficacia de un enfoque multimodal basado en aprendizaje profundo para
 \subsection{Objetivos Específicos}
 
 \begin{itemize}
-    \item Identificar y seleccionar las variables físico-químicas más relevantes para la evaluación de calidad postcosecha del dátil Medjool, así como los métodos de adquisición y análisis más adecuados para cada tipo de dato (RGB, NIR y colorimetría).
-    \item Analizar el grado de correlación entre variables físicas y químicas del fruto (como contenido de humedad y firmeza) y los datos obtenidos por sensores ópticos no destructivos (RGB, NIR, CIELab).
-    \item Diseñar y comparar modelos de aprendizaje profundo (CNN, Modelos Multicapa de Percepción, modelos híbridos) que utilicen distintos tipos de datos (visuales, espectrales y colorimétricos) para predecir variables críticas de calidad del fruto.
+    \item Identificar y seleccionar las variables físico-químicas más relevantes para la evaluación de calidad postcosecha del dátil Medjool, así como los métodos de adquisición y análisis más adecuados para cada tipo de dato (\textit{RGB}, \textit{NIR} y colorimetría).
+    \item Analizar el grado de correlación entre variables físicas y químicas del fruto (como contenido de humedad y firmeza) y los datos obtenidos por sensores ópticos no destructivos (\textit{RGB}, \textit{NIR}, CIELab).
+    \item Diseñar y comparar modelos de aprendizaje profundo (\textit{CNN}, Modelos Multicapa de Percepción, modelos híbridos) que utilicen distintos tipos de datos (visuales, espectrales y colorimétricos) para predecir variables críticas de calidad del fruto.
     \item Evaluar el impacto de la integración de datos multimodales sobre el desempeño predictivo de los modelos, en comparación con modelos unimodales y con métodos tradicionales de clasificación y análisis.
-    \item Examinar la interpretabilidad de los modelos generados mediante técnicas de inteligencia artificial explicable (XAI), para identificar qué variables o patrones influyen más en las decisiones del sistema.
+    \item Examinar la interpretabilidad de los modelos generados mediante técnicas de inteligencia artificial explicable (\textit{XAI}), para identificar qué variables o patrones influyen más en las decisiones del sistema.
     \item Validar experimentalmente la factibilidad técnica, predictiva y operativa del enfoque propuesto en condiciones reales del proceso postcosecha del dátil Medjool en el Valle de Mexicali.
 \end{itemize}
 
@@ -51,7 +51,7 @@ Evaluar la eficacia de un enfoque multimodal basado en aprendizaje profundo para
 
 Este proyecto es viable tanto técnica como académicamente. Su enfoque no destructivo, basado en sensores ópticos, visión por computadora y aprendizaje profundo, permite adaptar soluciones de alto impacto a un contexto agrícola local sin incurrir en costos elevados.\\
 
-Desde el punto de vista técnico, el sistema propuesto puede desarrollarse utilizando cámaras RGB convencionales, iluminación controlada, sensores ópticos de bajo costo (multibanda o NIR) y plataformas de procesamiento single-board computers. Estas herramientas son compatibles con bibliotecas de código abierto como TensorFlow, Keras, PyTorch, OpenCV y Scikit-learn, lo cual permite reducir significativamente la dependencia de software propietario y equipos industriales costosos, sin sacrificar calidad en los modelos desarrollados.\\
+Desde el punto de vista técnico, el sistema propuesto puede desarrollarse utilizando cámaras \textit{RGB} convencionales, iluminación controlada, sensores ópticos de bajo costo (multibanda o \textit{NIR}) y plataformas de procesamiento \textit{single-board computers} (\textit{SBC}). Estas herramientas son compatibles con bibliotecas de código abierto como TensorFlow, Keras, PyTorch, OpenCV y Scikit-learn, lo cual permite reducir significativamente la dependencia de software propietario y equipos industriales costosos, sin sacrificar calidad en los modelos desarrollados.\\
 
 En cuanto a la obtención de muestras, existe disposición por parte de productores locales para colaborar en la recolección y etiquetado de frutos, lo cual garantiza la disponibilidad de datos reales representativos.\\
 
@@ -64,14 +64,14 @@ En conjunto, la combinación de experiencia técnica, uso de herramientas abiert
 Este proyecto tiene como objetivo generar resultados concretos tanto en el ámbito científico como en su aplicación práctica. Entre los productos esperados se incluyen los siguientes:
 
 \begin{itemize}
-    \item Un dataset propio y curado, compuesto por imágenes, espectros ópticos, variables físico-químicas y etiquetas de calidad de frutos Medjool, recolectados en condiciones reales en el Valle de Mexicali. Este dataset será documentado y compartido públicamente bajo licencia abierta, promoviendo su reutilización por otros investigadores.
+    \item Un \textit{dataset} propio y curado, compuesto por imágenes, espectros ópticos, variables físico-químicas y etiquetas de calidad de dátiles Medjool, recolectados en condiciones reales en el Valle de Mexicali. Este \textit{dataset} será documentado y compartido públicamente bajo licencia abierta, promoviendo su reutilización por otros investigadores.
     \item Tres artículos científicos sometidos a revistas arbitradas:
     \begin{itemize}
         \item Un artículo de revisión bibliográfica sobre el uso de inteligencia artificial en la evaluación de calidad postcosecha de frutas.
-        \item Un artículo metodológico que documente la construcción del dataset, protocolos de adquisición y validación cruzada.
+        \item Un artículo metodológico que documente la construcción del \textit{dataset}, protocolos de adquisición y validación cruzada.
         \item Un artículo principal que presente los resultados del sistema inteligente desarrollado, su desempeño predictivo y posibles aplicaciones prácticas.
     \end{itemize}
-    \item Un prototipo funcional del sistema, integrando hardware de bajo costo (cámara RGB, sensor óptico multibanda, iluminación controlada y unidad de procesamiento embebido), con una interfaz básica para visualización o clasificación automática de frutos.
+    \item Un prototipo funcional del sistema, integrando hardware de bajo costo (cámara \textit{RGB}, sensor óptico multibanda, iluminación controlada y unidad de procesamiento embebido), con una interfaz básica para visualización o clasificación automática de frutos.
     \item Transferencia de conocimiento y colaboración con el sector agrícola local, mediante presentación de resultados en eventos técnicos y la generación de materiales de divulgación para productores, cooperativas y empacadoras.
     \item Posibilidad de escalar o adaptar el sistema a otros frutos de la región con características similares, ampliando su impacto más allá del cultivo de dátil.
 \end{itemize}
