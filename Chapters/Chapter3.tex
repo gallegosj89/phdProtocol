@@ -165,3 +165,13 @@ El prototipo consistirá en un conjunto de componentes conectados que integren, 
 Durante esta fase, se analizarán aspectos como el tiempo de inferencia, el consumo de recursos, la estabilidad del flujo de datos y la posibilidad de escalar el enfoque a nuevos lotes o condiciones de trabajo. Esta exploración permitirá identificar barreras técnicas y oportunidades de mejora, y servirá como evidencia preliminar sobre la viabilidad del enfoque más allá del entorno académico.\\
 
 Aunque el prototipo no representa una solución comercial ni una herramienta de uso industrial inmediato, su desarrollo contribuirá a cerrar el ciclo del estudio, al permitir confrontar el modelo con la práctica, validar su funcionamiento y generar insumos útiles para futuras etapas de implementación o transferencia tecnológica.
+
+\subsection{Plan de análisis de resultados}
+
+Los resultados obtenidos serán analizados desde una perspectiva cuantitativa, comparativa y explicativa. En el caso de los modelos de regresión, se evaluará la capacidad de predicción mediante métricas como \textit{MAE}, \textit{RMSE} y coeficiente de determinación (\textit{$R^2$}), comparando los valores predichos con las mediciones físico-químicas reales de referencia. Para los modelos de clasificación, se analizará el desempeño utilizando precisión, sensibilidad, \textit{F1-score} y \textit{AUC-ROC}, a partir de la matriz de confusión generada sobre un conjunto de validación.\\
+
+Se realizarán comparaciones entre modelos entrenados con diferentes modalidades de entrada (\textit{RGB}, \textit{NIR}, \textit{CIELab} y combinaciones multimodales), con el objetivo de identificar qué combinación ofrece el mejor rendimiento. Estas comparaciones incluirán pruebas estadísticas como análisis de varianza (ANOVA) para evaluar diferencias significativas entre configuraciones.\\
+
+Además, se aplicarán técnicas de inteligencia artificial explicable (\textit{XAI}), como \textit{SHAP} y \textit{Grad-CAM}, para interpretar qué variables o regiones de entrada tienen mayor influencia en la predicción del modelo. Esta interpretación permitirá validar la coherencia del comportamiento del modelo con el conocimiento agronómico y detectar posibles sesgos o errores sistemáticos.\\
+
+Los resultados también serán analizados en función de su aplicabilidad práctica, evaluando tiempos de inferencia, estabilidad del modelo y viabilidad de implementación en un entorno real. En conjunto, estos elementos permitirán determinar si el enfoque multimodal propuesto cumple con los objetivos de evaluación no destructiva, precisión, interpretabilidad y potencial de transferencia tecnológica en el contexto postcosecha del dátil \textit{Medjool}.
